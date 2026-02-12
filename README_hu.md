@@ -163,6 +163,14 @@ A kezdeti beállítás után módosíthatod az opciókat: **Beállítások** > *
 - Hálózati hozzáférés az Exchange szerverhez (on-premise) vagy Office 365-höz
 - Python könyvtár: `exchangelib` (automatikusan települ)
 
+## Támogatók
+
+<p align="center">
+  <a href="https://infotipp.hu"><img src="docs/images/infotipp-logo.png" height="40" alt="Infotipp Rendszerház Kft." /></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://brutefence.com"><img src="docs/images/brutefence.png" height="40" alt="BruteFence" /></a>
+</p>
+
 ## Licenc
 
 MIT License - lásd [LICENSE](LICENSE).
