@@ -157,6 +157,12 @@ A kezdeti beállítás után módosíthatod az opciókat: **Beállítások** > *
 - OAuth2: Ellenőrizd, hogy megadtad a rendszergazdai jóváhagyást a `Calendars.ReadWrite`-hoz
 - OAuth2: Győződj meg, hogy a client secret nem járt le
 
+## Biztonsági szempontok
+
+- Mindig HTTPS-t használj az Exchange szerverhez való csatlakozáskor
+- On-premise NTLM kapcsolatoknál erősen ajánlott az Exchange-et megbízható belső hálózaton vagy VPN-en keresztül elérni
+- Lehetőség szerint használj dedikált szolgáltatásfiókot minimális jogosultságokkal
+
 ## Követelmények
 
 - Home Assistant 2024.1.0 vagy újabb

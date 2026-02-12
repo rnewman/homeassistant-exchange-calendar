@@ -174,6 +174,12 @@ After initial setup, you can modify these options via **Settings** > **Devices &
 - Increase "Days to fetch" in options
 - Verify the email address matches the mailbox
 
+## Security Considerations
+
+- Always use HTTPS when connecting to your Exchange server
+- For on-premise NTLM connections, it is strongly recommended to access Exchange over a trusted internal network or VPN
+- Use a dedicated service account with minimal permissions where possible
+
 ## Requirements
 
 - Home Assistant 2024.1.0 or later
