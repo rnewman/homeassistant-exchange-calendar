@@ -1,0 +1,75 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Exchange Calendar Setup",
+        "description": "Choose your Exchange authentication method.",
+        "data": {
+          "auth_type": "Authentication type"
+        }
+      },
+      "ntlm": {
+        "title": "On-premise Exchange (NTLM)",
+        "description": "Enter your Exchange server details and credentials.",
+        "data": {
+          "server": "Exchange server hostname",
+          "email": "Email address",
+          "username": "Username (optional, if different from email)",
+          "password": "Password",
+          "domain": "Windows domain (optional)",
+          "allow_insecure_ssl": "Allow insecure SSL (self-signed certificates)"
+        },
+        "data_description": {
+          "server": "e.g., mail.example.com",
+          "email": "e.g., user@example.com",
+          "username": "Leave empty to use email address",
+          "domain": "e.g., MYDOMAIN (for DOMAIN\\username format)"
+        }
+      },
+      "oauth2": {
+        "title": "Office 365 (OAuth2)",
+        "description": "Enter your Azure AD application credentials. You need to register an app in Azure AD with Calendars.ReadWrite permission.",
+        "data": {
+          "email": "Email address",
+          "tenant_id": "Azure AD Tenant ID",
+          "client_id": "Application (Client) ID",
+          "client_secret": "Client Secret"
+        },
+        "data_description": {
+          "tenant_id": "Found in Azure AD > App registrations > Overview",
+          "client_id": "Found in Azure AD > App registrations > Overview",
+          "client_secret": "Found in Azure AD > App registrations > Certificates & secrets"
+        }
+      },
+      "options": {
+        "title": "Calendar Options",
+        "description": "Configure calendar fetch settings.",
+        "data": {
+          "days_to_fetch": "Days to fetch ahead",
+          "max_events": "Maximum number of events",
+          "update_interval": "Update interval (minutes)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to Exchange server: {error_detail}",
+      "invalid_auth": "Authentication failed: {error_detail}",
+      "unknown": "Unexpected error: {error_detail}"
+    },
+    "abort": {
+      "already_configured": "This Exchange account is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Exchange Calendar Options",
+        "data": {
+          "days_to_fetch": "Days to fetch ahead",
+          "max_events": "Maximum number of events",
+          "update_interval": "Update interval (minutes)"
+        }
+      }
+    }
+  }
+}
