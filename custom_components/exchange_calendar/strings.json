@@ -47,7 +47,8 @@
         "data": {
           "days_to_fetch": "Days to fetch ahead",
           "max_events": "Maximum number of events",
-          "update_interval": "Update interval (minutes)"
+          "update_interval": "Update interval (minutes)",
+          "read_only": "Read-only mode (disable create/update/delete)"
         }
       }
     },
@@ -67,7 +68,8 @@
         "data": {
           "days_to_fetch": "Days to fetch ahead",
           "max_events": "Maximum number of events",
-          "update_interval": "Update interval (minutes)"
+          "update_interval": "Update interval (minutes)",
+          "read_only": "Read-only mode (disable create/update/delete)"
         }
       }
     }

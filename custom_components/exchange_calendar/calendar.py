@@ -16,7 +16,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.util import dt as dt_util
 
-from .const import DOMAIN, CONF_EMAIL
+from .const import DOMAIN, CONF_EMAIL, CONF_READ_ONLY, DEFAULT_READ_ONLY
 from .coordinator import ExchangeCalendarCoordinator
 
 _LOGGER = logging.getLogger(__name__)
@@ -43,11 +43,6 @@ class ExchangeCalendarEntity(
     """Exchange Calendar entity with full CRUD support."""
 
     _attr_has_entity_name = True
-    _attr_supported_features = (
-        CalendarEntityFeature.CREATE_EVENT
-        | CalendarEntityFeature.DELETE_EVENT
-        | CalendarEntityFeature.UPDATE_EVENT
-    )
 
     def __init__(
         self,
@@ -60,6 +55,16 @@ class ExchangeCalendarEntity(
         self._attr_unique_id = f"{DOMAIN}_{config_entry.entry_id}"
         self._attr_name = f"Exchange ({email})"
         self._config_entry = config_entry
+
+        read_only = config_entry.options.get(CONF_READ_ONLY, DEFAULT_READ_ONLY)
+        if read_only:
+            self._attr_supported_features = CalendarEntityFeature(0)
+        else:
+            self._attr_supported_features = (
+                CalendarEntityFeature.CREATE_EVENT
+                | CalendarEntityFeature.DELETE_EVENT
+                | CalendarEntityFeature.UPDATE_EVENT
+            )
 
     @property
     def event(self) -> CalendarEvent | None:

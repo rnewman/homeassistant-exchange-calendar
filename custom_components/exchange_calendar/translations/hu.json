@@ -47,7 +47,8 @@
         "data": {
           "days_to_fetch": "El\u0151rejelzett napok sz\u00e1ma",
           "max_events": "Esem\u00e9nyek maxim\u00e1lis sz\u00e1ma",
-          "update_interval": "Friss\u00edt\u00e9si id\u0151k\u00f6z (perc)"
+          "update_interval": "Friss\u00edt\u00e9si id\u0151k\u00f6z (perc)",
+          "read_only": "Csak olvashat\u00f3 m\u00f3d (l\u00e9trehoz\u00e1s/m\u00f3dos\u00edt\u00e1s/t\u00f6rl\u00e9s tilt\u00e1sa)"
         }
       }
     },
@@ -67,7 +68,8 @@
         "data": {
           "days_to_fetch": "El\u0151rejelzett napok sz\u00e1ma",
           "max_events": "Esem\u00e9nyek maxim\u00e1lis sz\u00e1ma",
-          "update_interval": "Friss\u00edt\u00e9si id\u0151k\u00f6z (perc)"
+          "update_interval": "Friss\u00edt\u00e9si id\u0151k\u00f6z (perc)",
+          "read_only": "Csak olvashat\u00f3 m\u00f3d (l\u00e9trehoz\u00e1s/m\u00f3dos\u00edt\u00e1s/t\u00f6rl\u00e9s tilt\u00e1sa)"
         }
       }
     }

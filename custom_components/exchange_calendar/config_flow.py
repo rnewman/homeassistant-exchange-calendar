@@ -24,12 +24,14 @@ from .const import (
     CONF_DAYS_TO_FETCH,
     CONF_MAX_EVENTS,
     CONF_UPDATE_INTERVAL,
+    CONF_READ_ONLY,
     AUTH_TYPE_NTLM,
     AUTH_TYPE_OAUTH2,
     DEFAULT_DAYS_TO_FETCH,
     DEFAULT_MAX_EVENTS,
     DEFAULT_ALLOW_INSECURE_SSL,
     DEFAULT_UPDATE_INTERVAL,
+    DEFAULT_READ_ONLY,
 )
 from homeassistant.components import persistent_notification
 
@@ -247,6 +249,9 @@ class ExchangeCalendarConfigFlow(ConfigFlow, domain=DOMAIN):
                     vol.Optional(
                         CONF_UPDATE_INTERVAL, default=DEFAULT_UPDATE_INTERVAL
                     ): vol.All(int, vol.Range(min=1, max=60)),
+                    vol.Optional(
+                        CONF_READ_ONLY, default=DEFAULT_READ_ONLY
+                    ): bool,
                 }
             ),
         )
@@ -294,6 +299,12 @@ class ExchangeCalendarOptionsFlow(OptionsFlow):
                             CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL
                         ),
                     ): vol.All(int, vol.Range(min=1, max=60)),
+                    vol.Optional(
+                        CONF_READ_ONLY,
+                        default=self.config_entry.options.get(
+                            CONF_READ_ONLY, DEFAULT_READ_ONLY
+                        ),
+                    ): bool,
                 }
             ),
         )
