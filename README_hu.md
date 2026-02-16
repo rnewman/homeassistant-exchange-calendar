@@ -169,6 +169,18 @@ A kezdeti beállítás után módosíthatod az opciókat: **Beállítások** > *
 - Hálózati hozzáférés az Exchange szerverhez (on-premise) vagy Office 365-höz
 - Python könyvtár: `exchangelib` (automatikusan települ)
 
+## Fejlesztési terv
+
+- [x] HACS integráció
+- [x] On-premise Exchange támogatás (NTLM)
+- [x] Office 365 támogatás (OAuth2) EWS-en keresztül
+- [x] Csak olvasható mód
+- [x] Hangasszisztens (Assist pipeline) támogatás
+- [ ] **Microsoft Graph API migráció Office 365-höz** — Az EWS [2026 októberében megszűnik Exchange Online-on](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online). Az on-premise (NTLM) nem érintett. Lásd [#3](https://github.com/bohemtucsok/homeassistant-exchange-calendar/issues/3).
+- [ ] Megosztott / szoba naptár támogatás
+- [ ] Több naptár támogatás fiókonként
+- [ ] Személyes Microsoft fiók támogatás
+
 ## Támogatók
 
 <p align="center">

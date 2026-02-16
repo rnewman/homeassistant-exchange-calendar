@@ -186,6 +186,18 @@ After initial setup, you can modify these options via **Settings** > **Devices &
 - Network access to your Exchange server (on-premise) or Office 365
 - Python library: `exchangelib` (automatically installed)
 
+## Roadmap
+
+- [x] HACS integration
+- [x] On-premise Exchange support (NTLM)
+- [x] Office 365 support (OAuth2) via EWS
+- [x] Read-only mode option
+- [x] Voice assistant (Assist pipeline) support
+- [ ] **Microsoft Graph API migration for Office 365** — EWS will be [deprecated for Exchange Online in October 2026](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online). On-premise (NTLM) is not affected. See [#3](https://github.com/bohemtucsok/homeassistant-exchange-calendar/issues/3).
+- [ ] Shared / room calendar support
+- [ ] Multiple calendar support per account
+- [ ] Personal Microsoft account support
+
 ## Supporters
 
 <p align="center">
